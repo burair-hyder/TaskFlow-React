@@ -1,27 +1,32 @@
-export default function EmptyState() {
+import { ClipboardList, SearchX } from 'lucide-react';
+
+export default function EmptyState({ type = 'empty', onAddTask, onClearFilters }) {
+  const isFiltered = type === 'filtered';
+
   return (
     <div className="empty-state">
       <div className="empty-state__icon">
-        <svg
-          width="64"
-          height="64"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-          <line x1="9" y1="9" x2="15" y2="9" />
-          <line x1="9" y1="13" x2="15" y2="13" />
-          <line x1="9" y1="17" x2="12" y2="17" />
-        </svg>
+        {isFiltered ? <SearchX size={64} /> : <ClipboardList size={64} />}
       </div>
-      <h3 className="empty-state__title">No tasks yet</h3>
+      <h3 className="empty-state__title">
+        {isFiltered ? 'No tasks match your filters' : 'Your task board is empty'}
+      </h3>
       <p className="empty-state__text">
-        Get started by adding your first task using the button below.
+        {isFiltered
+          ? 'Try adjusting your search or filter criteria to find what you\'re looking for.'
+          : 'Stay organised and productive. Create your first task to get started.'}
       </p>
+      <div className="empty-state__actions">
+        {isFiltered ? (
+          <button type="button" className="btn btn-outline" onClick={onClearFilters}>
+            Clear Filters
+          </button>
+        ) : (
+          <button type="button" className="btn btn-primary" onClick={onAddTask}>
+            Add Your First Task
+          </button>
+        )}
+      </div>
     </div>
   );
 }

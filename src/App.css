@@ -532,6 +532,13 @@
   color: var(--color-text-secondary);
   max-width: 360px;
   line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.empty-state__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 /* ---- Modal ---- */

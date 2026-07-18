@@ -1,9 +1,23 @@
 import TaskCard from './TaskCard';
 import EmptyState from './EmptyState';
 
-export default function TaskList({ tasks, onEdit, onDelete, onToggleStatus }) {
+export default function TaskList({
+  tasks,
+  onEdit,
+  onDelete,
+  onToggleStatus,
+  onAddTask,
+  onClearFilters,
+  hasActiveFilters = false,
+}) {
   if (!tasks || tasks.length === 0) {
-    return <EmptyState />;
+    return (
+      <EmptyState
+        type={hasActiveFilters ? 'filtered' : 'empty'}
+        onAddTask={onAddTask}
+        onClearFilters={onClearFilters}
+      />
+    );
   }
 
   return (
