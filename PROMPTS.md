@@ -37,3 +37,23 @@ Prompt:
 Prompt:
 
 > Create TaskCard and TaskList components for TaskFlow. Each task card should display the title, description, category, priority, status, and formatted due date. Highlight overdue tasks that are not completed. Add actions for complete or reopen, edit, and delete. Keep the task card accessible and responsive. Do not place task-management logic directly inside the presentation component.
+
+## 7. Add Search, Filters, and Sorting
+
+Prompt:
+
+> Create a FilterBar component for TaskFlow with a search field, status filter, priority filter, category filter, and sorting dropdown. Then show me how to derive a filtered and sorted task list without modifying the original tasks array. Search should be case-insensitive and should match the task title and description.
+
+
+## 8. Add Dashboard Statistics
+
+Prompt:
+
+> Create a DashboardStats component for TaskFlow. Display total, completed, pending, in-progress, overdue, and due-today task counts. Also calculate the completion percentage safely, including when there are no tasks. Use reusable stat cards and Lucide React icons.
+
+## 9. Add a Progress Chart
+
+Prompt:
+> reate a responsive Recharts pie chart for TaskFlow showing completed, pending, and in-progress tasks. The chart must handle an empty task list without displaying errors. Include labels or a legend and keep the component reusable.
+
+
