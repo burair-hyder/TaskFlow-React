@@ -31,3 +31,9 @@ Prompt:
 Prompt:
 
 > Create a reusable TaskForm component for TaskFlow. It must support both adding and editing tasks. Include fields for title, description, status, priority, category, and due date. Add validation that rejects empty titles and prevents past due dates for newly created tasks. Show clear inline validation messages. Use controlled React inputs. Do not use external form libraries.
+
+## 6. Build Task Cards and Task List
+
+Prompt:
+
+> Create TaskCard and TaskList components for TaskFlow. Each task card should display the title, description, category, priority, status, and formatted due date. Highlight overdue tasks that are not completed. Add actions for complete or reopen, edit, and delete. Keep the task card accessible and responsive. Do not place task-management logic directly inside the presentation component.
