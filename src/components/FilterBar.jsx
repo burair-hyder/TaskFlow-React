@@ -31,20 +31,6 @@ export default function FilterBar({ filters, onFilterChange }) {
   return (
     <div className="filter-bar">
       <div className="filter-bar__row">
-        {/* Search */}
-        <div className="filter-bar__group filter-bar__group--search">
-          <label htmlFor="search" className="sr-only">Search tasks</label>
-          <input
-            id="search"
-            name="search"
-            type="text"
-            value={filters.search}
-            onChange={handleChange}
-            placeholder="Search tasks..."
-            className="filter-bar__search"
-          />
-        </div>
-
         {/* Status */}
         <div className="filter-bar__group">
           <label htmlFor="status" className="sr-only">Filter by status</label>
