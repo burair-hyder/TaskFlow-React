@@ -54,6 +54,128 @@ Prompt:
 ## 9. Add a Progress Chart
 
 Prompt:
-> reate a responsive Recharts pie chart for TaskFlow showing completed, pending, and in-progress tasks. The chart must handle an empty task list without displaying errors. Include labels or a legend and keep the component reusable.
+> Create a responsive Recharts pie chart for TaskFlow showing completed, pending, and in-progress tasks. The chart must handle an empty task list without displaying errors. Include labels or a legend and keep the component reusable.
+
+## 10. Add Dark and Light Mode
+
+Prompt:
+> Add light and dark theme support to TaskFlow. Create a ThemeToggle component, store the selected theme in localStorage, apply it to the document root, and use CSS variables for background, surface, text, border, primary, and danger colors. The theme should remain selected after refreshing the page.
+
+## 11. Improve the Interface
+
+Prompt:
+> Review the current TaskFlow user interface and improve its CSS so it looks like a professional productivity dashboard. Use a clean layout, consistent spacing, rounded cards, readable typography, clear badges, hover states, focus states, and responsive breakpoints. Do not change the existing application functionality.
+
+## 12. Add Empty States
+
+> Create a reusable EmptyState component for TaskFlow. It should support separate messages for an empty task list and for filters with no matching results. Include an icon and a button that can either add a task or clear filters.
+
+
+
+
+
+
+
+## layout redesign :
+
+> I want to completely redesign the UI layout of my React application called TaskFlow. Do NOT change any functionality or business logic—only improve the user interface and layout.
+Current issues:
+- Everything feels stacked vertically with too much empty whitespace.
+- There is no clear visual hierarchy.
+- The dashboard does not look like a modern productivity application.
+- The statistics cards feel disconnected.
+- The page doesn't utilize the screen width effectively.
+- The progress chart occupies too much vertical space.
+- The empty state is too far down the page.
+- Overall it looks like individual components rather than one cohesive application.
+
+Redesign the layout with the following structure:
+
+1. Sticky top navigation/header
+   - TaskFlow logo
+   - Small subtitle ("Organize your work efficiently")
+   - Search bar (optional in header or below)
+   - Theme toggle on the right
+
+2. Dashboard summary section
+   - A responsive row of statistic cards
+   - Equal heights
+   - Better spacing
+   - Icons
+   - Hover animation
+
+3. Main content
+   Split the page into two responsive columns on desktop:
+
+   LEFT (70%)
+   - Search + Filters
+   - Task list
+
+   RIGHT (30%)
+   - Progress chart
+   - Completion percentage
+   - Quick statistics
+   - Upcoming due tasks
+
+4. Floating Add Task button
+   Bottom-right corner
+
+5. Empty state
+   Display inside the task list area instead of pushing everything downward.
+
+6. Responsive design
+   Desktop:
+   Two-column layout
+
+   Tablet:
+   Two columns with reduced spacing
+
+   Mobile:
+   Everything stacks naturally.
+
+Use CSS Grid and Flexbox appropriately.
+
+Keep the design minimal, modern, clean, similar to Notion, Linear, TickTick or Todoist.
+
+Do not generate random colors.
+Use my existing CSS variables.
+
+Only modify layout and styling.
+Do not rewrite business logic.
+
+## visual polish
+> Now improve the visual design of the interface.
+
+Goals:
+
+- Premium modern SaaS look
+- Better spacing
+- Better typography
+- Better alignment
+- Better card shadows
+- Softer borders
+- Rounded corners
+- Better button hierarchy
+- Consistent icon sizing
+- Better empty state
+- Better filter bar
+
+Use an 8px spacing system.
+
+Increase whitespace between sections.
+
+Cards should have subtle shadows and hover elevation.
+
+Buttons should have smooth transitions.
+
+Inputs should look modern.
+
+Statistics cards should become visually attractive without becoming colorful.
+
+Improve responsiveness.
+
+Keep accessibility in mind.
+
+Do not change functionality.
 
 

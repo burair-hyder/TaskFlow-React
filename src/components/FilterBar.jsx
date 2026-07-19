@@ -31,7 +31,6 @@ export default function FilterBar({ filters, onFilterChange }) {
   return (
     <div className="filter-bar">
       <div className="filter-bar__row">
-        {/* Status */}
         <div className="filter-bar__group">
           <label htmlFor="status" className="sr-only">Filter by status</label>
           <select
@@ -47,7 +46,6 @@ export default function FilterBar({ filters, onFilterChange }) {
           </select>
         </div>
 
-        {/* Priority */}
         <div className="filter-bar__group">
           <label htmlFor="priority" className="sr-only">Filter by priority</label>
           <select
@@ -63,7 +61,6 @@ export default function FilterBar({ filters, onFilterChange }) {
           </select>
         </div>
 
-        {/* Category */}
         <div className="filter-bar__group">
           <label htmlFor="category" className="sr-only">Filter by category</label>
           <select
@@ -79,7 +76,6 @@ export default function FilterBar({ filters, onFilterChange }) {
           </select>
         </div>
 
-        {/* Sort */}
         <div className="filter-bar__group">
           <label htmlFor="sort" className="sr-only">Sort tasks</label>
           <select
@@ -95,13 +91,13 @@ export default function FilterBar({ filters, onFilterChange }) {
           </select>
         </div>
 
-        {/* Clear */}
         {hasActiveFilters && (
           <button
             type="button"
             className="btn btn-sm btn-ghost"
             onClick={handleClear}
             title="Clear all filters"
+            aria-label="Clear all filters"
           >
             ✕ Clear
           </button>

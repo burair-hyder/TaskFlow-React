@@ -1,8 +1,5 @@
 import { PRIORITY_COLORS, STATUS_COLORS } from '../utils/constants';
 
-/**
- * Formats an ISO date string to a readable format (e.g. "Jan 15, 2026").
- */
 function formatDate(dateStr) {
   if (!dateStr) return null;
   try {
@@ -16,9 +13,6 @@ function formatDate(dateStr) {
   }
 }
 
-/**
- * Checks whether a task is overdue (has a due date before today and is not done).
- */
 function isOverdue(task) {
   if (!task.dueDate || task.status === 'done') return false;
   const today = new Date();
@@ -83,7 +77,7 @@ export default function TaskCard({ task, onEdit, onDelete, onToggleStatus }) {
         )}
         {task.dueDate && (
           <span className={`task-card__due-date ${overdue ? 'task-card__due-date--overdue' : ''}`}>
-            {overdue ? '⚠ Overdue: ' : 'Due: '}
+            {overdue ? 'Overdue: ' : 'Due: '}
             {formatDate(task.dueDate)}
           </span>
         )}

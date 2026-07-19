@@ -8,12 +8,9 @@ import {
 } from 'lucide-react';
 import { useTasks } from '../context/TaskContext';
 
-/**
- * A single stat card displaying an icon, count, and label.
- */
 function StatCard({ icon: Icon, label, count, color, accent }) {
   return (
-    <div className="stat-card" style={{ borderLeftColor: color }}>
+    <div className="stat-card">
       <div className="stat-card__icon" style={{ color }}>
         <Icon size={24} />
       </div>
@@ -93,19 +90,6 @@ export default function DashboardStats() {
           />
         ))}
       </div>
-      {stats.total > 0 && (
-        <div className="dashboard-stats__overall">
-          <div className="progress-bar">
-            <div
-              className="progress-bar__fill"
-              style={{ width: `${completionPercent}%` }}
-            />
-          </div>
-          <span className="dashboard-stats__percent">
-            {completionPercent}% complete
-          </span>
-        </div>
-      )}
     </section>
   );
 }

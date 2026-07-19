@@ -20,10 +20,6 @@ const COLORS = {
   done: '#22c55e',
 };
 
-/**
- * Prepares chart data from a tasks array.
- * Returns an empty array when there are no tasks.
- */
 function prepareChartData(tasks) {
   const counts = { todo: 0, 'in-progress': 0, done: 0 };
 

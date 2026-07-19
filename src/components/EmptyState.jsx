@@ -8,9 +8,9 @@ export default function EmptyState({ type = 'empty', onAddTask, onClearFilters }
       <div className="empty-state__icon">
         {isFiltered ? <SearchX size={64} /> : <ClipboardList size={64} />}
       </div>
-      <h3 className="empty-state__title">
+      <h2 className="empty-state__title">
         {isFiltered ? 'No tasks match your filters' : 'Your task board is empty'}
-      </h3>
+      </h2>
       <p className="empty-state__text">
         {isFiltered
           ? 'Try adjusting your search or filter criteria to find what you\'re looking for.'

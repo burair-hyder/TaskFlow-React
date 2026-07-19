@@ -1,30 +1,37 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
 
-const THEME_KEY = 'taskflow_theme';
+const STORAGE_KEY = 'taskflow_theme';
+
+function getInitialTheme() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === 'dark' || stored === 'light') return stored;
+  } catch {}
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useLocalStorage(THEME_KEY, 'light');
+  const [theme, setTheme] = useState(getInitialTheme);
 
-  // Apply the theme to <html> whenever it changes
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {}
   }, [theme]);
 
-  const toggle = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  const toggle = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
 
   return (
     <button
       type="button"
       className="theme-toggle"
       onClick={toggle}
-      aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-      title={theme === 'light' ? 'Dark mode' : 'Light mode'}
+      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+      {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
     </button>
   );
 }

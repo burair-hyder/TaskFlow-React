@@ -1,13 +1,5 @@
 import { useState, useEffect } from 'react';
 
-/**
- * A custom hook that reads and writes data to localStorage.
- * It keeps React state in sync with the stored value.
- *
- * @param {string} key - The localStorage key to store the value under.
- * @param {*} initialValue - The fallback value if nothing is stored yet.
- * @returns {[*, function]} A stateful value and a setter to update it.
- */
 export function useLocalStorage(key, initialValue) {
   const [storedValue, setStoredValue] = useState(() => {
     try {

@@ -24,7 +24,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
   const [errors, setErrors] = useState(INITIAL_ERRORS);
   const [touched, setTouched] = useState({});
 
-  // Populate form when editing an existing task
   useEffect(() => {
     if (taskToEdit) {
       setForm({
@@ -41,8 +40,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-
-    // Clear the error for this field as the user types
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
@@ -139,7 +136,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
         </div>
 
         <form onSubmit={handleSubmit} noValidate>
-          {/* Title */}
           <div className="form-group">
             <label htmlFor="title">
               Title <span className="required">*</span>
@@ -159,7 +155,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
             )}
           </div>
 
-          {/* Description */}
           <div className="form-group">
             <label htmlFor="description">Description</label>
             <textarea
@@ -172,7 +167,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
             />
           </div>
 
-          {/* Status */}
           <div className="form-group">
             <label htmlFor="status">Status</label>
             <select
@@ -189,7 +183,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
             </select>
           </div>
 
-          {/* Priority */}
           <div className="form-group">
             <label htmlFor="priority">Priority</label>
             <select
@@ -206,7 +199,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
             </select>
           </div>
 
-          {/* Category */}
           <div className="form-group">
             <label htmlFor="category">Category</label>
             <select
@@ -223,7 +215,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
             </select>
           </div>
 
-          {/* Due Date */}
           <div className="form-group">
             <label htmlFor="dueDate">Due Date</label>
             <input
@@ -240,7 +231,6 @@ export default function TaskForm({ taskToEdit, onClose }) {
             )}
           </div>
 
-          {/* Actions */}
           <div className="form-actions">
             <button type="button" className="btn btn-secondary" onClick={onClose}>
               Cancel

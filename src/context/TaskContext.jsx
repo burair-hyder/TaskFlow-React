@@ -3,15 +3,10 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const TaskContext = createContext(null);
 
-/**
- * Generates a unique ID using crypto.randomUUID when available,
- * with a timestamp + random fallback for older browsers.
- */
 function generateId() {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
     return crypto.randomUUID();
   }
-  // Fallback: timestamp + random string
   return `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
 }
 
