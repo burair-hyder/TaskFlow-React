@@ -227,32 +227,6 @@ Dashboard Updates Automatically
 
 ---
 
-## 🤖 AI-Assisted Development
-
-This project was developed using **AI as a development assistant** throughout the development process.
-
-AI was used for:
-
-- Planning the project architecture
-- Designing reusable React components
-- Structuring the application
-- Implementing React Hooks and Context API
-- Building Local Storage persistence
-- Creating filtering and sorting logic
-- Improving responsiveness
-- Debugging runtime issues
-- Refactoring components
-- Reviewing code quality and accessibility
-
-All AI-generated code was **reviewed, tested, and manually refined** before being included in the final application.
-
-Additional documentation:
-
-- 📄 **PROMPTS.md** — Prompts used during development
-- 📄 **AI-USAGE.md** — How AI assisted and manual improvements made
-
----
-
 ## 📚 Learning Outcomes
 
 Through this project I gained practical experience with:
