@@ -200,33 +200,23 @@ Dashboard Updates Automatically
 
 ### 🏠 Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/taskflow_dashboard.png)
 
 ---
 
 ### ✅ Task Management
 
-![Tasks](screenshots/tasks.png)
+![Tasks](screenshots/taskflow_task.png)
 
 ---
 
 ### ➕ Add Task
 
-![Task Form](screenshots/task-form.png)
+![Task Form](screenshots/taskflow_addtask.png)
 
 ---
 
-### 🌙 Dark Mode
 
-![Dark Mode](screenshots/dark-mode.png)
-
----
-
-### 📱 Mobile View
-
-![Mobile View](screenshots/mobile.png)
-
----
 
 ## 📚 Learning Outcomes
 
