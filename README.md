@@ -13,9 +13,10 @@ Built as an AI-assisted React project demonstrating modern frontend development 
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Demo - Vercel
 
-🚀 **Vercel:** https://task-flow-react-alpha.vercel.app/
+Vercel: https://task-flow-react-alpha.vercel.app/
+
 ---
 
 ## 📂 GitHub Repository
